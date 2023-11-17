@@ -1,8 +1,14 @@
-body {
-    font-family: 'Arial', sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima del 100% del viewport */
 }
 
 header {
@@ -12,7 +18,6 @@ header {
     padding: 10px 0;
 }
 
-/* Mejoras en la navegación */
 header nav {
     max-width: 1000px;
     margin: 0 auto;
@@ -54,6 +59,7 @@ header nav ul li a:focus {
 }
 
 main {
+    flex: 1; /* Permite que main crezca y ocupe el espacio disponible */
     padding: 20px;
 }
 
@@ -62,4 +68,17 @@ footer {
     padding: 20px 0;
     background: #333;
     color: #fff;
+}
+
+.carousel-item video {
+    max-height: 500px; /* Ajusta esto según tus necesidades */
+    width: 100%;
+}
+
+/* Estilos personalizados para los controles del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* Cambia el color según tu diseño */
+    border-radius: 50%;
+    padding: 10px;
 }
